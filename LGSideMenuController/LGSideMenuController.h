@@ -269,4 +269,6 @@ typedef NS_ENUM(NSUInteger, LGSideMenuSwipeGestureArea)
 /** Unavailable, select it on your rootViewController */
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation __attribute__((unavailable("select it on your rootViewController")));
 
+- (void)updateShadow;
+
 @end

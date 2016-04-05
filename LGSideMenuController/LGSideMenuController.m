@@ -1796,4 +1796,14 @@
     }
 }
 
+- (void)updateShadow
+{
+    [_rootViewStyleView removeFromSuperview];
+    [self.view insertSubview:_rootViewStyleView belowSubview:_rootVC.view];
+    
+    [_leftViewCoverView removeFromSuperview];
+    [self.view insertSubview:_leftViewCoverView aboveSubview:_leftView];
+    _leftViewCoverColor = kLGSideMenuCoverColor;
+}
+
 @end
