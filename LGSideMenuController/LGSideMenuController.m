@@ -1302,6 +1302,20 @@
 
 #pragma mark - Show Hide
 
+- (void)showStatusbar
+{
+    if (kLGSideMenuSystemVersion >= 7.0)
+    {
+        _currentPreferredStatusBarHidden = _savedStatusBarHidden;
+        _currentPreferredStatusBarStyle = _savedStatusBarStyle;
+        
+        _waitingForUpdateStatusBar = YES;
+        
+        [self statusBarAppearanceUpdate];
+        [self setNeedsStatusBarAppearanceUpdate];
+    }
+}
+
 - (void)showLeftViewPrepare
 {
     [self.view endEditing:YES];

@@ -271,4 +271,6 @@ typedef NS_ENUM(NSUInteger, LGSideMenuSwipeGestureArea)
 
 - (void)updateShadow;
 
+- (void)showStatusbar;
+
 @end
